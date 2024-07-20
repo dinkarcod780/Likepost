@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class=" h-[100vh] w-full bg-red-500 flex gap-10">
+        <div class="h-[30vh] w-[15vw] bg-black mt-[10%] ">
+    <img class="h-[30vh] w-[30vh]  object-coverr" src="/images/<%=user.profileimage%>" alt="">
+    </div>
+    <div class="bg-white h-[40vh] w-[50vw]">
+    <h1><%=user.name%></h1>
+    <h2><%=user.username%></h2>
+    <h1><%=user.email%></h1>
+
+
+    <!-- <form action="/profile" method="post">
+      
+        <input type="text" value="<%=user.name%>" placeholder="enter your your name" name="name">
+        <input type="text" value="<%=user.username%>" placeholder="enter your your username" name="username">
+        <input type="text" value="<%=user.email%>" placeholder="enter your your email" name="email">
+    </form> -->
+    <a href="/login">Logout</a> <br>
+    <a href="/post">create Post</a> <br>
+    <a href="/feed">Visit post</a>
+    <a href="/send_mail">Send Mail</a>
+</div>
+</div>
+</body>
+</html>

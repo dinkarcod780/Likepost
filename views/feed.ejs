@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="d-flex h-[40%] w-[20%] bg-red-300 ml-5">
+        <% posts.forEach(card=>{%>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <!-- <i class="ri-heart-3-line"></i> -->
+           
+            <h5 class="card-title"><%=card.title%></h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary"><%=card.caption%></h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary"><%=card.user.name%></h6>
+
+            <a href="/like/<%=card._id%>">Like</a>
+            <p><%= card.likes.length%></p>
+          </div>
+        </div>
+      <%})%>
+     
+      </div>
+
+
+      
+</body>
+</html>
